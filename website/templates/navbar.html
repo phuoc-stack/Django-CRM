@@ -1,0 +1,20 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="m-2 d-flex gap-2 align-items-center">
+        <a class="navbar-brand" href="{% url 'home' %}">Django CRM</a>
+        
+        {% if user.is_authenticated %}
+        <a class="navbar-brand nav-link-gray" style="font-size: 16px; color: gainsboro;" 
+        href="{% url 'logout' %}">Logout</a>
+
+        {% else %}
+        <a class="navbar-brand nav-link-gray" style="font-size: 16px; color: gainsboro;" 
+        href="{% url 'register' %}">Register</a>
+
+        <a class="navbar-brand nav-link-gray" style="font-size: 16px; color: gainsboro;" 
+        href="{% url 'home' %}">Login</a>
+
+        {% endif %}
+    </div>
+</nav>
+  
+  

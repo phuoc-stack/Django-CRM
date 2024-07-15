@@ -4,6 +4,8 @@
         
         {% if user.is_authenticated %}
         <a class="navbar-brand nav-link-gray" style="font-size: 16px; color: gainsboro;" 
+        href="{% url 'add_record' %}">Add Record</a>
+        <a class="navbar-brand nav-link-gray" style="font-size: 16px; color: gainsboro;" 
         href="{% url 'logout' %}">Logout</a>
 
         {% else %}
